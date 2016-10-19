@@ -1,3 +1,4 @@
+#Some Comments
 FROM alpine:latest
 #COPY ./dep/* /usr/bin/
 RUN apk update
