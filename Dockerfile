@@ -1,3 +1,4 @@
+#LMD : 2016-10-20
 #Better be on the edge, because mono is on the egde branch
 FROM alpine:edge
 #COPY ./dep/* /usr/bin/
@@ -12,14 +13,14 @@ FROM alpine:edge
 
 RUN echo 'http://dl-4.alpinelinux.org/alpine/edge/testing/' >> /etc/apk/repositories
 
-# Get all the dependencies for sqlite
+# install all the dependencies for sqlite
 
 RUN apk add --update --progress --no-cache  musl ncurses-libs ncurses-terminfo-base ncurses-terminfo \
 pkgconf \
 sqlite-libs \
 sqlite 
 
-# Get all the dependencies for mono
+# install all the dependencies for mono
 
 RUN apk add --update --progress --no-cache  zlib libbz2 libressl2.4-libcrypto \
 expat libffi gdbm ncurses-libs readline libressl2.4-libssl python2
