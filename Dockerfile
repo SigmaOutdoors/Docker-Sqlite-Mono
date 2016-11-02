@@ -50,7 +50,7 @@ EXPOSE 80
 RUN apk --verbose --update add mono && \
 rm -rf /var/cache/apk/*
 
-COPY ./hello-world.cs /usr/bin/
+COPY ./dep/hello-world.cs /usr/bin/
 
 #Run mono test inside container
 #   cd /usr/bin
